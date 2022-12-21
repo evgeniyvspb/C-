@@ -15,7 +15,7 @@ Console.WriteLine($"наибольшая цыфра числа = {maxdigit}");
 
 
 
-int MaxDigit(int number);
+int MaxDigit(int number)
 {
     int firstDigit = number / 10;
     int secondDigit = number % 10;
