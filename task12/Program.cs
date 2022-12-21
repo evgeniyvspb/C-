@@ -5,22 +5,17 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-Console.WriteLine("Введите два числа")
+Console.WriteLine("Введите два числа");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
 
 bool DivCheck(int num1, int num2)
 {
     return num1 % num2 == 0;
-    // if (num1 % num2 == 0)
-    // {
-    //     return true;
-    // }
-    // else return false; 
 }
 
-if (DivCheck(userNum1, userNum2))
+if (DivCheck(num1, num2))
 {
-    Console.WriteLine($"{userNum1}, {userNum2} -> кратно");
+    Console.WriteLine($"{num1}, {num2} -> кратно");
 }
-else Console.WriteLine($"{userNum1}, {userNum2} -> не кратно, остаток " + (userNum1 % userNum2));
+else Console.WriteLine($"{num1}, {num2} -> не кратно, остаток " + (num1 % num2));
