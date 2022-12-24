@@ -12,7 +12,7 @@ if (number <0) number =  (-1) * number; // поскольку трехначны
 
 if (number > 100)
 {
-    while ((number >= 999) || (number < 100))
+    while ((number >= 999))
     {
         number = number / 10;
     }
