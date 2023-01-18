@@ -44,15 +44,16 @@ int[] MakeArray(int[] array)
     int[] resArray = new int[size];
     for (int i = 0; i < resArray.Length; i++)
     {
-        if (i==resArray.Length - 1 && array.Length%2 ==1)
-        {
-            resArray[i]=array[i];
-        }
-        else
-        {
+        // if (i==resArray.Length - 1 && array.Length%2 ==1)
+        // {
+        //     resArray[i]=array[i];
+        // }
+        // else
+        // {
             resArray[i] = array[i]*array[array.Length-i-1];
-        }
+        //}
     }
+    if (array.Length%2==1) resArray[size-1]=array[array.Length/2];
     return resArray;
 }
 
