@@ -37,15 +37,16 @@ void PrintMatrix(int[,] matrix)
 
 double[] MiddleAr(int[,] matrix)
 {
-    double[] midAr = new double[matrix.GetLength(1)];
-    for (int j = 0; j < matrix.GetLength(1); j++)
+     double[] midAr = new double[matrix.GetLength(1)];
+    for (int j = 0; j < (matrix.GetLength(1)); j++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int i = 0; i < (matrix.GetLength(0)); i++)
         {
-            midAr[j]+=midAr[i];
+            midAr[j]+=Convert.ToDouble(matrix[i,j]);
         }
-        midAr[j]=Convert.ToInt32(midAr)/matrix.GetLength(0);
+        midAr[j]=Math.Round(midAr[j]/matrix.GetLength(0),2,MidpointRounding.ToEven);
     }
+    return midAr;
 }
 
 void PrintArrayDouble(double[] array)
@@ -53,7 +54,7 @@ void PrintArrayDouble(double[] array)
     Console.Write("["); 
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length-1) Console.Write(array[i]+";");
+        if (i < array.Length-1) Console.Write(array[i]+"  ;  ");
         else Console.Write(array[i]);
     }
     Console.WriteLine("]");
