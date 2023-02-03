@@ -5,14 +5,14 @@
 
 int mUser = InsertDigit("number:");
 int nUser = InsertDigit("power:");
-int pow = PowerNumbers(mUser,nUser);
-Console.WriteLine($"Power = {pow}");
+int pow = PowerNumbers(mUser, Math.Abs(nUser));
+Console.WriteLine(nUser > 0 ? $"Power = {pow}" : $"Power = 1 / {pow}");
 
 
 int PowerNumbers(int num, int power)
 {
-    if (power==0) return 1;
-    return PowerNumbers(num,power-1)*num;
+    if (power == 0) return 1;
+    return PowerNumbers(num, power - 1) * num;
 }
 
 
